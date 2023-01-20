@@ -1,6 +1,6 @@
 <?php
 
-$db_name = 'mysql:host=localhost;dbname=moJule_db';
+$db_name = 'mysql:host=localhost;dbname=mojule_db';
 $user_name = 'root';
 $user_password = '';
 
