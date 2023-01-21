@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
    if($select_admin->rowCount() > 0){
       $fetch_admin_id = $select_admin->fetch(PDO::FETCH_ASSOC);
       $_SESSION['admin_id'] = $fetch_admin_id['id'];
-      $message[] = 'logged in!';
+      header('location:dashboard.php');
    }else{
       $message[] = 'incorrect username or password!';
    }
@@ -30,9 +30,10 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <!-- icons cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
     <!-- our custom css -->
     <link rel="stylesheet" href="../css/admin_style.css">
 </head>
@@ -44,7 +45,7 @@ if(isset($_POST['submit'])){
          echo '
          <div class="message">
             <span>'.$message.'</span>
-            <i class="zmdi zmdi-delete" onclick="this.parentElement.remove();"></i>
+            <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
          </div>
          ';
       }
