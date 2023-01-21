@@ -6,7 +6,7 @@ session_start();
 
 $admin_id = $_SESSION['admin_id'];
 
-if(!isset($admin_id)){
+if(isset($admin_id)){
    header('location:admin_login.php');
 }
 
@@ -24,6 +24,11 @@ if(!isset($admin_id)){
     <link rel="stylesheet" href="../css/admin_style.css">
 </head>
 <body>
-    
+    <?php include '../components/admin_header.php' ?>
+
+
+
+    <!-- admin_scripts -->
+    <script src="../js/admin_scripts.js"></script>
 </body>
 </html>

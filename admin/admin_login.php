@@ -14,12 +14,12 @@ if(isset($_POST['submit'])){
    $select_admin = $conn->prepare("SELECT * FROM `admins` WHERE name = ? AND password = ?");
    $select_admin->execute([$name, $pass]);
 
-   if($select_admin->rowCount() > 0){
+   if(isset($_REQUEST['err'])){
+      $message[] = 'incorrect username or password!';
+   }else{
       $fetch_admin_id = $select_admin->fetch(PDO::FETCH_ASSOC);
       $_SESSION['admin_id'] = $fetch_admin_id['id'];
       header('location:dashboard.php');
-   }else{
-      $message[] = 'incorrect username or password!';
    }
 
 }
