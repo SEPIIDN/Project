@@ -238,6 +238,11 @@
    display: none;
 }
 
+@keyframes fadeIn{
+   0%{
+      transform: translateY(1rem);
+   }
+}
 
 
  @media (max-width:991px){
