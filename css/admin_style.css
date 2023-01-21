@@ -92,6 +92,34 @@
    display: flex;
    gap:1rem;
 }
+.message{
+    position: sticky;
+    top:0;
+    max-width: 1200px;
+    margin:0 auto;
+    background-color: var(--light-bg);
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:1.5rem;
+    z-index: 1100;
+ }
+ 
+ .message span{
+    font-size: 2rem;
+    color:var(--black);
+ }
+ 
+ .message i{
+    cursor: pointer;
+    color:var(--red);
+    font-size: 2.5rem;
+ }
+ 
+ .message i:hover{
+    color:var(--black);
+ }
 
  .form-container{
     min-height: 100vh;
