@@ -29,6 +29,6 @@ if(isset($admin_id)){
 
 
     <!-- admin_scripts -->
-    <script src="../js/admin_scripts.js"></script>
+    <script src="../js/admin_script.js"></script>
 </body>
 </html>
