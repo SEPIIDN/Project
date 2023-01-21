@@ -35,15 +35,9 @@
          <?php
             $select_profile = $conn->prepare("SELECT * FROM `admins` WHERE id = ?");
             $select_profile->execute([$admin_id]);
-            $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
+            $fetch_profile = 'default admin';
          ?>
-         <?php
-   if($fetch_profile == false){
-            echo 'recieved';
-   }else{
-            echo 'fuck';
-   }
-?>
+         <p><?= $fetch_profile; ?></p>
          <a href="../admin/update_profile.php" class="btn">update profile</a>
          <div class="flex-btn">
             <a href="../admin/register_admin.php" class="option-btn">register</a>
