@@ -187,3 +187,7 @@ section{
     display: inline-block;
     width: auto;
  }
+
+ .swiper-pagination-bullet-active{
+    background-color: var(--main-color);
+ }
