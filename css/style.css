@@ -556,4 +556,31 @@ section{
     font-size: 1.8rem;
     color:var(--light-color);
  }
+
+ .orders .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: flex-start;
+ }
+ 
+ .orders .box-container .box{
+    padding:1rem 2rem;
+    flex:1 1 40rem;
+    border:var(--border);
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+ }
+ 
+ .orders .box-container .box p{
+    margin:.5rem 0;
+    line-height: 1.8;
+    font-size: 2rem;
+    color:var(--light-color);
+ }
+ 
+ .orders .box-container .box p span{
+    color:var(--main-color);
+ }
  
