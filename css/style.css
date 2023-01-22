@@ -389,4 +389,36 @@ section{
     border-radius: .5rem;
  }
  
+ .search-form form{
+    display: flex;
+    gap:1rem;
+ }
+ 
+ .search-form form input{
+    width: 100%;
+    border:var(--border);
+    border-radius: .5rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    padding:1.4rem;
+    font-size: 1.8rem;
+    color:var(--black);
+ }
+ 
+ .search-form form button{
+    font-size: 2.5rem;
+    height: 5.5rem;
+    line-height: 5.5rem;
+    background-color: var(--main-color);
+    cursor: pointer;
+    color:var(--white);
+    border-radius: .5rem;
+    width: 6rem;
+    text-align: center;
+ }
+ 
+ .search-form form button:hover{
+    background-color: var(--black);
+ }
+  
  
