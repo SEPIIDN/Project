@@ -388,7 +388,7 @@ section{
     width: 100%;
     border-radius: .5rem;
  }
- 
+
  .search-form form{
     display: flex;
     gap:1rem;
@@ -421,4 +421,92 @@ section{
     background-color: var(--black);
  }
   
- 
+ .products .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 33rem);
+   gap:1.5rem;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.products .box-container .box{
+   position: relative;
+   background-color: var(--white);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+   border:var(--border);
+   padding:2rem;
+   overflow: hidden;
+}
+
+.products .box-container .box img{
+   height: 20rem;
+   width: 100%;
+   object-fit: contain;
+   margin-bottom: 1rem;
+}
+
+.products .box-container .box .fa-heart,
+.products .box-container .box .fa-eye{
+   position: absolute;
+   top:1rem;
+   height: 4.5rem;
+   width: 4.5rem;
+   line-height: 4.2rem;
+   font-size: 2rem;
+   background-color: var(--white);
+   border:var(--border);
+   border-radius: .5rem;
+   text-align: center;
+   color:var(--black);
+   cursor: pointer;
+   transition: .2s linear;
+}
+
+.products .box-container .box .fa-heart{
+   right: -6rem;
+}
+
+.products .box-container .box .fa-eye{
+   left: -6rem;
+}
+
+.products .box-container .box .fa-heart:hover,
+.products .box-container .box .fa-eye:hover{
+   background-color: var(--black);
+   color:var(--white);
+}
+
+.products .box-container .box:hover .fa-heart{
+   right:1rem;
+}
+
+.products .box-container .box:hover .fa-eye{
+   left:1rem;
+}
+
+.products .box-container .box .name{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.products .box-container .box .flex{
+   display: flex;
+   align-items: center;
+   gap:1rem;
+}
+
+.products .box-container .box .flex .qty{
+   width: 7rem;
+   padding:1rem;
+   border:var(--border);
+   font-size: 1.8rem;
+   color:var(--black);
+   border-radius: .5rem;
+}
+
+.products .box-container .box .flex .price{
+   font-size: 2rem;
+   color:var(--red);
+   margin-right: auto;
+}
