@@ -312,4 +312,48 @@ section{
     left: 1rem;
  }
  
+ .shopping-cart .fa-edit{
+    height: 4.5rem;
+    border-radius: .5rem;
+    background-color: var(--orange);
+    width: 5rem;
+    font-size: 2rem;
+    color:var(--white);
+    cursor: pointer;
+ }
+ 
+ .shopping-cart .fa-edit:hover{
+    background-color: var(--black);
+ }
+ 
+ .shopping-cart .sub-total{
+    margin:2rem 0;
+    font-size: 2rem;
+    color:var(--light-color);
+ }
+ 
+ .shopping-cart .sub-total span{
+    color:var(--red);
+ }
+ 
+ .cart-total{
+    max-width: 50rem;
+    margin:0 auto;
+    margin-top: 3rem;
+    background-color: var(--white);
+    border:var(--border);
+    border-radius: .5rem;;
+    padding:2rem;
+    text-align: center;
+ }
+ 
+ .cart-total p{
+    font-size: 2.5rem;
+    color:var(--black);
+    margin-bottom: 2rem;
+ }
+ 
+ .cart-total p span{
+    color:var(--red);
+ }
  
