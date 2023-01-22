@@ -1,3 +1,32 @@
+<?php
+
+include 'components/connect.php';
+
+session_start();
+
+if(isset($_SESSION['user_id'])){
+   $user_id = $_SESSION['user_id'];
+}else{
+   $user_id = '';
+   header('location:user_login.php');
+};
+
+include 'components/wishlist_cart.php';
+
+if(isset($_POST['delete'])){
+   $wishlist_id = $_POST['wishlist_id'];
+   $delete_wishlist_item = $conn->prepare("DELETE FROM `wishlist` WHERE id = ?");
+   $delete_wishlist_item->execute([$wishlist_id]);
+}
+
+if(isset($_GET['delete_all'])){
+   $delete_wishlist_item = $conn->prepare("DELETE FROM `wishlist` WHERE user_id = ?");
+   $delete_wishlist_item->execute([$user_id]);
+   header('location:wishlist.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
