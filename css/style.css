@@ -356,4 +356,37 @@ section{
  .cart-total p span{
     color:var(--red);
  }
+ .form-container form{
+    background-color: var(--white);
+    padding:2rem;
+    border-radius: .5rem;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    margin:0 auto;
+    max-width: 50rem;
+ }
+ 
+ .form-container form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color:var(--black);
+ }
+ 
+ .form-container form p{
+    font-size: 2rem;
+    color:var(--light-color);
+    margin:1.5rem 0;
+ }
+ 
+ .form-container form .box{
+    margin:1rem 0;
+    background-color: var(--light-bg);
+    padding:1.4rem;
+    font-size: 1.8rem;
+    color:var(--black);  
+    width: 100%;
+    border-radius: .5rem;
+ }
+ 
  
