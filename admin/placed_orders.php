@@ -65,6 +65,18 @@ if(isset($_GET['delete'])){
       <p> total products : <span><?= $fetch_orders['total_products']; ?></span> </p>
       <p> total price : <span>$<?= $fetch_orders['total_price']; ?>/-</span> </p>
       <p> payment method : <span><?= $fetch_orders['method']; ?></span> </p>
+      <form action="" method="post">
+         <input type="hidden" name="order_id" value="<?= $fetch_orders['id']; ?>">
+         <select name="payment_status" class="select">
+            <option selected disabled><?= $fetch_orders['payment_status']; ?></option>
+            <option value="pending">pending</option>
+            <option value="completed">completed</option>
+         </select>
+        <div class="flex-btn">
+         <input type="submit" value="update" class="option-btn" name="update_payment">
+         <a href="placed_orders.php?delete=<?= $fetch_orders['id']; ?>" class="delete-btn" onclick="return confirm('delete this order?');">delete</a>
+        </div>
+      </form>
    </div>
    <?php
          }
